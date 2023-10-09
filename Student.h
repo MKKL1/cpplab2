@@ -6,8 +6,22 @@
 #define CPPLAB1_STUDENT_H
 
 
-class Student {
+#include "Person.h"
 
+class Student : Person{
+private:
+    string index;
+public:
+    Student(string name, string surname, int age, string index);
+
+    void setIndex(string newIndex);
+    void init(string name, string surname, int age, string index);
+
+    string getIndex();
+
+    void showInfoStudent();
+
+    Student();
 };
 
 
