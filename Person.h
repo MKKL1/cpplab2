@@ -16,6 +16,7 @@ private:
 public:
     Person(string name, string surname, int age);
     Person();
+    void init(string name, string surname, int age);
     void setAge(int age);
     string getSurname();
     bool is_18();

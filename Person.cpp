@@ -30,3 +30,9 @@ void Person::showInfoPerson() {
     cout << "Imie: " << name << "nazwisko" << surname << "wiek: " << age << endl;
 }
 
+void Person::init(string name, string surname, int age) {
+    this->name = name;
+    this->surname = surname;
+    this->age = age;
+}
+
