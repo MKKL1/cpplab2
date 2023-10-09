@@ -9,4 +9,6 @@ add_executable(cpplab1 main.cpp
         Person.h
         Person.cpp
         Teacher.cpp
-        Teacher.h)
+        Teacher.h
+        Animal.cpp
+        Animal.h)
