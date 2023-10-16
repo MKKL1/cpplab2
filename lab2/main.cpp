@@ -2,31 +2,21 @@
 // Created by student on 16.10.2023.
 //
 #include <iostream>
+#include "Figure.h"
+#include "Square.h"
+#include "Circle.h"
+
 using namespace std;
-class Parent {
-
-public:
-    virtual void show() {
-        cout << "Metoda wirtualna Parent" << endl;
-    }
-};
-
-class Child : public Parent {
-
-public:
-    virtual void show() override {
-        cout << "Metoda wirtualna Child" << endl;
-    }
-};
 
 int main() {
-    //typ statyczny Parent, typ dynamiczny Child
-    Parent *p = new Child();
-    //metoda show z klasy Child
-    p->show();
-    //typ statyczny Child, typ dynamiczny Child
-    Child *c = new Child();
-    //metoda show z klasy Child
-    c->show();
+    Figure* f1 = new Square(4);
+    Figure* f2 = new Circle(2);
+    f1->calculateArea();
+    f1->show();
 
+    f2->calculateArea();
+    f2->show();
+
+    delete f1;
+    delete f2;
 }
