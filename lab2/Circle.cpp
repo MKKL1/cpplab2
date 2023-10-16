@@ -17,3 +17,7 @@ Circle::~Circle() {
 void Circle::calculateArea() {
     setArea(r*r*M_PI);
 }
+
+void Circle::show() {
+    cout << "Pole koła " << getArea() << endl;
+}

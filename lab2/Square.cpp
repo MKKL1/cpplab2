@@ -16,3 +16,7 @@ Square::~Square() {
 void Square::calculateArea() {
     setArea(a*a);
 }
+
+void Square::show() {
+    cout << "Pole kwadratu " << getArea() << endl;
+}

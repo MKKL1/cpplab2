@@ -18,6 +18,7 @@ public:
     Circle(float r1);
     ~Circle();
     virtual void calculateArea() override;
+    virtual void show() override;
 };
 
 

@@ -20,7 +20,7 @@ public:
 
     virtual void calculateArea() = 0;
 
-    void show();
+    virtual void show() = 0;
 };
 
 
