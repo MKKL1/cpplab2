@@ -11,4 +11,9 @@ Animal::Animal(int limbNr, const string &nazwa, bool animalProtected = true) : l
 
 
 void Animal::giveVoice() {
+    cout << "hrum, miau, hau, piiii" << endl;
+}
+
+void Animal::info() {
+    cout << "Liczba konczyn: " << limbNr << " Nazwa: " << name << " jest chroniony: " << protectedAnimal << endl;
 }

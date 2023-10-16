@@ -5,12 +5,12 @@
 #ifndef CPPLAB1_ANIMAL_H
 #define CPPLAB1_ANIMAL_H
 
-#include <string>
+#include <iostream>
 
 using namespace std;
 
 class Animal {
-private:
+protected:
     int limbNr;
     string nazwa;
     bool animalProtected;
@@ -19,6 +19,7 @@ public:
 
     Animal(int limbNr, const string &nazwa, bool animalProtected);
     void giveVoice();
+    void info();
 };
 
 
