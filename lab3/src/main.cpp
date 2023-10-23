@@ -33,4 +33,18 @@ int main() {
     a->sort();
     a->show();
 
+    Array<string>* b = new Array<string>(20);
+    b->append("siema");
+    b->append("siema3331");
+    b->append("siema11");
+    b->append("siema151222");
+    b->append("siema13254");
+    b->append("siema24");
+
+    b->show();
+    b->sort();
+    b->show();
+
+    cout << "b max " << b->max() << endl;
+
 }
