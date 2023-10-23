@@ -1,9 +1,0 @@
-# ninja log v5
-25	793	7197624124401764	CMakeFiles/cpplab2.dir/lab2/Employee.cpp.obj	2d5c13937d00c281
-45	808	7197624124686843	CMakeFiles/cpplab2.dir/lab2/Figure.cpp.obj	3da9a2903b989121
-17	809	7197624124696818	CMakeFiles/cpplab2.dir/lab2/main.cpp.obj	404772cc749e1bf3
-9	822	7197624125021591	CMakeFiles/cpplab2.dir/lab2/Developer.cpp.obj	5b731e7a4557d93f
-52	834	7197624125141622	CMakeFiles/cpplab2.dir/lab2/TeamLeader.cpp.obj	590eb2efc6d4e2cd
-1	875	7197624125556799	CMakeFiles/cpplab2.dir/lab2/Circle.cpp.obj	54b396148698396c
-797	1428	7197624131088210	CMakeFiles/cpplab2.dir/lab2/Square.cpp.obj	ab29f60d04b1bc6f
-1428	2015	7197624136927830	cpplab2.exe	6d2494718697f2bb
