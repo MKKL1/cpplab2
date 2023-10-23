@@ -20,7 +20,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="297a41b3-2383-43cd-8c05-0a5dffd32936" name="Changes" comment="Zadanie 3.1">
+    <list default="true" id="297a41b3-2383-43cd-8c05-0a5dffd32936" name="Changes" comment="Zadanie 3.2">
+      <change afterPath="$PROJECT_DIR$/lab3/src/Array.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +117,7 @@
       <workItem from="1697454249300" duration="1356000" />
       <workItem from="1697468625272" duration="641000" />
       <workItem from="1698059100349" duration="900000" />
-      <workItem from="1698078984725" duration="2651000" />
+      <workItem from="1698078984725" duration="4026000" />
     </task>
     <task id="LOCAL-00001" summary="Zadanie 1.2">
       <created>1697468668685</created>
@@ -155,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698081536848</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Zadanie 3.2">
+      <option name="closed" value="true" />
+      <created>1698081897637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698081897637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +207,7 @@
     <MESSAGE value="Adding example" />
     <MESSAGE value="Specjalizacja szablonow" />
     <MESSAGE value="Zadanie 3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 3.1" />
+    <MESSAGE value="Zadanie 3.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zadanie 3.2" />
   </component>
 </project>

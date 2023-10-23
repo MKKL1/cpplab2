@@ -8,4 +8,5 @@ include_directories(src)
 add_executable(lab3
 src/main.cpp
         src/Adding.h
-        src/Student.h)
+        src/Student.h
+        src/Array.h)

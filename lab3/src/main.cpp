@@ -2,6 +2,7 @@
 #include <limits>
 #include "Adding.h"
 #include "Student.h"
+#include "Array.h"
 
 using namespace std;
 //Napisz funkcję szablonową, która przyjmuje jako argument tablicę o typie będącym
@@ -17,6 +18,19 @@ T min(T tab[], int n) {
     return _min;
 }
 int main() {
-    int liczby[] = {7,2,3,4,5};
-    cout << "min: " << min(liczby, 5) << endl;
+//    int liczby[] = {7,2,3,4,5};
+//    cout << "min: " << min(liczby, 5) << endl;
+
+    Array<int>* a = new Array<int>(20);
+    a->append(10);
+    a->append(10);
+    a->append(12);
+    a->append(13);
+    a->append(5);
+    a->append(4);
+
+    a->show();
+    a->sort();
+    a->show();
+
 }
