@@ -34,4 +34,5 @@ void Adding<T>::show() {
     cout << "Element " << element << endl;
 }
 
+
 #endif //LAB3_ADDING_H
