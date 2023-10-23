@@ -1,0 +1,3 @@
+C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug/CMakeFiles/cpplab2.dir
+C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

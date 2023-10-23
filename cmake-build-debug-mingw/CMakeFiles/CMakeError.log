@@ -1,0 +1,27 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_4928f/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_4928f.dir\build.make CMakeFiles/cmTC_4928f.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp'
+CMakeFiles\cmTC_4928f.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_4928f.dir/CMakeCCompilerABI.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_4928f.dir/CMakeCCompilerABI.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4928f/fast' failed
+mingw32-make.exe: *** [cmTC_4928f/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_f57bc/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_f57bc.dir\build.make CMakeFiles/cmTC_f57bc.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp'
+CMakeFiles\cmTC_f57bc.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_f57bc.dir/testCCompiler.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_f57bc.dir/testCCompiler.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/krystian/CLionProjects/cpplab2/cmake-build-debug-mingw/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f57bc/fast' failed
+mingw32-make.exe: *** [cmTC_f57bc/fast] Error 2
+
+
+
