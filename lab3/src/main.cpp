@@ -1,18 +1,14 @@
 #include <iostream>
+#include "Adding.h"
 
 using namespace std;
 
-template <typename T>
-void mswap(T& a, T& b) {
-    T temp;
-    temp=a;
-    a=b;
-    b=temp;
-}
-
 int main() {
-    int a = 8;
-    int b = 6;
-    mswap(a,b);
-    cout << "a: " << a << " b: " << b << endl;
+    Adding<int> a1(5);
+    a1.add(6);
+    a1.show();
+
+    Adding<string> a2("Hello ");
+    a2.add("world!");
+    a2.show();
 }

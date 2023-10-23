@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(src)
 
 add_executable(lab3
-src/main.cpp)
+src/main.cpp
+        src/Adding.h)
