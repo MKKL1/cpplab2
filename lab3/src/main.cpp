@@ -4,53 +4,19 @@
 #include "Student.h"
 
 using namespace std;
-
+//Napisz funkcję szablonową, która przyjmuje jako argument tablicę o typie będącym
+//parametrem szablonu i rozmiar tablicy typu całkowitego. Zadaniem funkcji jest znalezienie
+//elementu minimalnego w tablicy i zwrócenie go.
 template <typename T>
-void showAll(T* tab[], int n) {
-    for (int i = 0; i < n; ++i) {
-        tab[i]->show();
+T min(T tab[], int n) {
+    T _min = tab[0];
+    for (int i = 1; i < n; ++i) {
+        T current = tab[i];
+        if(current < _min) _min = current;
     }
+    return _min;
 }
-
-template <typename T>
-void checkType(T a) {
-    T val = numeric_limits<T>::max();
-    cout << val << endl;
-}
-
 int main() {
-//    Adding<int> a1(5);
-//    a1.add(6);
-//    a1.show();
-//
-//    Adding<string> a2("Hello ");
-//    a2.add("world!");
-//    a2.show();
-
-//    Student<float> s(5,"Ala");
-//    s.showMark();
-//    Student<int> s1(5,"Ala");
-//    s1.showMark();
-//    Student<string> s2(5,"Ala");
-//    s2.showMark();
-
-    Adding<int>* arrAdd[3];
-    for (int i = 0; i < 3; ++i) {
-        arrAdd[i] = new Adding<int>(i);
-    }
-
-    showAll(arrAdd, 3);
-
-    Student<string>* arrStudent[3];
-    for (int i = 0; i < 3; ++i) {
-        arrStudent[i] = new Student<string>(i+2, "Ola");
-    }
-    showAll(arrStudent, 3);
-
-    for (int i = 0; i < 3; ++i) {
-        delete arrAdd[i];
-        delete arrStudent[i];
-    }
-
-    checkType(3);
+    int liczby[] = {7,2,3,4,5};
+    cout << "min: " << min(liczby, 5) << endl;
 }
