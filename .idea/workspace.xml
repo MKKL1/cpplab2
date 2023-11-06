@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -21,9 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="297a41b3-2383-43cd-8c05-0a5dffd32936" name="Changes" comment="Zadanie 3.3 - 1">
+      <change afterPath="$PROJECT_DIR$/lab5/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/Array.h" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/Array.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +56,9 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="1.2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2WqJbQ4KboIdry0xJb2RLVuXLFS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -75,7 +74,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/student.DESKTOP-N01B4AU/CLionProjects/cpplab2/lab3/CMakeLists.txt",
+    "last_opened_file_path": "C:/Users/student.DESKTOP-N01B4AU/labcpp/lab5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,14 +88,15 @@
       <recent name="C:\Users\student.DESKTOP-N01B4AU\CLionProjects\cpplab2\lab3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\student.DESKTOP-N01B4AU\labcpp\lab5" />
       <recent name="C:\Users\student.DESKTOP-N01B4AU\CLionProjects\cpplab2\lab3" />
       <recent name="C:\Users\student.DESKTOP-N01B4AU\CLionProjects\cpplab2\lab3\src" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="lab3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="lab3" TARGET_NAME="lab3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="lab3" RUN_TARGET_NAME="lab3">
@@ -117,6 +117,7 @@
       <workItem from="1697468625272" duration="641000" />
       <workItem from="1698059100349" duration="900000" />
       <workItem from="1698078984725" duration="4624000" />
+      <workItem from="1699292767133" duration="148000" />
     </task>
     <task id="LOCAL-00001" summary="Zadanie 1.2">
       <created>1697468668685</created>
