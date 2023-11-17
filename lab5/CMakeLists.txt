@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(src)
 
 add_executable(lab5
-        src/main.cpp)
+        src/main.cpp
+        src/Dictionary.h
+        src/Dictionary.cpp)

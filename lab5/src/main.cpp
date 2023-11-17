@@ -7,6 +7,8 @@
 #include <map>
 #include <vector>
 
+#include "Dictionary.h"
+
 using namespace std;
 
 void showMap(map<string, int> m)
@@ -35,20 +37,25 @@ void show(const set<int> &s) {
     cout << endl;
 }
 
+//Zakłada że jeden element jest duplikatem
 pair<int, int> duplikat(const vector<int>& lista) {
     set<int> liczby_unikalne;
-    int duplikat;
+    int duplikat = 0;
     int suma = 0;
-    for(auto itr = lista.begin(); itr != lista.end(); itr++) {
-        auto res = liczby_unikalne.insert(*itr);
-        if(!res.second) {
-            duplikat = *res.first;
+    for(int itr : lista) {
+        //Spróbuj dodać do set'a
+        auto [element, success] = liczby_unikalne.insert(itr);
+        if(!success) {
+            //Jak nie udało się wstawić do set'a to ustaw tą wartość na duplikat
+            duplikat = *element;
         } else {
-            suma += *res.first;
+            //Jak się udało to wstawić to dodaj do sumy elem. unikalnych
+            suma += *element;
         }
     }
+    //Odjęcie duplikata od sumy
     suma -= duplikat;
-    return pair<int, int>(duplikat, suma);
+    return {duplikat, suma};
 }
 
 template<typename T> set<T> alternatywaWykluczajaca(set<T> s1, set<T> s2) {
@@ -65,18 +72,17 @@ template<typename T> set<T> alternatywaWykluczajaca(set<T> s1, set<T> s2) {
 char znak(const string& a, const string& b) {
     map<char, int> ilosc;
     for(char _a: a) {
-        ilosc.insert(pair<char, int>(_a, 1));
+        ilosc[_a]++;
+    }
+    for(char _b: b) {
+        ilosc[_b]++;
     }
 
-    for(char _b: b) {
-        if(ilosc.contains(_b))
-            ilosc.insert(pair<char, int>(_b, 2));
-        else ilosc.insert(pair<char, int>(_b, 1));
-    }
     for (const auto& [key, value] : ilosc)
-        if (value == 2)
+        if (value == 1)
             return key;
-    return 'a'; //nie wiem co
+
+    return 0; //Coś trzeba zwrócić
 }
 
 int main() {
@@ -132,17 +138,30 @@ int main() {
 //        cout << "elem znaleziony:" << it->first << " " << it->second << endl;
 //    else cout << "Brak elem" << endl;
 
-//Zadanie 5.1
+    // Zadanie 5.1
+    // vector<int> lista = {1,2,3,4,5,6,7,8,8,9,10};
+    // auto dup = duplikat(lista);
+    // cout << "Zduplikowana wartosc " << dup.first << " suma reszty " << dup.second << endl;
 
-    vector<int> lista = {1,2,3,4,5,6,7,8,8,9,10};
-    auto dup = duplikat(lista);
-    cout << "Zduplikowana wartosc " << dup.first << " suma reszty " << dup.second;
+    // Zadanie 5.2
+    // set<int> s1 = {1,2,3,4,5,6};
+    // set<int> s2 = {5,6,7,8,9,10};
+    // show(alternatywaWykluczajaca(s1, s2));
 
-    set<int> s1 = {1,2,3,4,5,6};
-    set<int> s2 = {5,6,7,8,9,10};
+    // Zadanie 5.3
+    // const string tekst1 = "abcdef";
+    // const string tekst2 = "bdeagfc";
+    // cout << "Roznica " << znak(tekst1, tekst2) << endl;
 
-    cout << endl;
-    show(alternatywaWykluczajaca(s1, s2));
-
+    //Zadanie 5.4
+    Dictionary dictionary;
+    dictionary.add("add", "dodaj");
+    dictionary.add("remove", "usun");
+    dictionary.add("show", "pokaz");
+    dictionary.add("get", "pobierz");
+    dictionary.add("a", "b");
+    dictionary.remove("a");
+    cout << dictionary.show() << endl;
+    cout << dictionary.showZA() << endl;
     return 0;
 }
