@@ -4,13 +4,21 @@
 #include <boost/multi_index/member.hpp>
 #include <boost/multi_index/ordered_index.hpp>
 #include <boost/multi_index/random_access_index.hpp>
+#include <boost/fusion/container.hpp>
+#include <boost/fusion/sequence.hpp>
+
+#include "ContactBook.h"
 #include "Person.h"
 
-#define orderedNonUnique
+// #define _orderedNonUnique
+// #define _hashedNonUnique
+// #define _fusion
 
 using namespace boost::multi_index;
 using namespace std;
-typedef multi_index_container<Person,
+
+#pragma region definitions
+    typedef multi_index_container<Person,
     indexed_by<
         hashed_non_unique<member<Person, string, &Person::name>>,
         hashed_non_unique<member<Person, int, &Person::age>>
@@ -30,9 +38,21 @@ typedef multi_index_container<Person,
 typedef person_multi_2::nth_index<0>::type name_type2;
 
 typedef person_multi_2::nth_index<1>::type age_type2;
+
+class Print {
+public:
+    template <typename T>
+    void operator()(T t) const {
+        cout << t <<endl;
+    }
+};
+#pragma endregion
+
+
+
 int main() {
-#pragma region
-#ifdef hashedNonUnique
+#pragma region HashedNonUnique
+#ifdef _hashedNonUnique
     person_multi persons;
 
     persons.insert({"Ala", 40});
@@ -79,8 +99,8 @@ int main() {
 #endif
 #pragma endregion
 
-#pragma region
-#ifdef orderedNonUnique
+#pragma region OrderedNonUnique
+#ifdef _orderedNonUnique
     person_multi_2 persons2;
     persons2.get<2>().push_back({"Ala", 40});
     persons2.get<2>().push_back({"Ala", 45});
@@ -103,5 +123,38 @@ int main() {
 #endif
 #pragma endregion
 
+#pragma region Fusion
+#ifdef _fusion
+    boost::fusion::vector<int, string, bool, double> vec{10,"C++", true, 3.14};
+    cout << "Trzeci element w vec:"
+    <<boost::fusion::at<boost::mpl::int_<2>>(vec) <<endl;
+    auto vec2 = push_back(vec, 'M');
+    cout <<"Liczba elementow w wvec: "<< size(vec) <<endl;
+    cout << "Liczba elementow w vec2: "<<size(vec2) <<endl;
+    cout << "Pierwszy element w vec2: "<< front(vec2) <<endl;
+    cout << "Ostatni element w vec2: "<< back(vec2) <<endl;
+    cout<<"Cala zawartosc vec2: "<<endl;
+    boost::fusion::for_each(vec2,Print());
+
+    auto itvStart = begin(vec);
+    auto itvStop = end(vec);
+    cout<<"Pierwszy element: "<<*itvStart<<endl;
+    cout<<"Drugi element: "<<*next(itvStart)<<endl;
+    cout<<"Trzeci element: "
+    <<*advance<boost::mpl::int_<2>>(itvStart)<<endl;
+#endif
+#pragma endregion
+
+    ContactBook book;
+    book.add(Contact("Ala", "Kowalska", "123436789","ul. Kowalska 1", 20));
+    book.add(Contact("Ola", "Nowak", "987654321","ul. Nowak 1", 30));
+    book.add(Contact("Piotr", "Kowalski", "1232456789","ul. Kowalska 1", 20));
+    book.add(Contact("Ala", "Kowalska", "12326789","ul. Kowalska 1", 20));
+    book.add(Contact("Ala", "Kowalska", "123326719","ul. Kowalska 1", 20));
+
+    book.show();
+
+    cout << "Liczba unikalnych nazwisk: " << book.countUniqueSurnames() << endl;
+    cout << "Osoba o nr tel 987654321: " << book.find("987654321")->name << endl;
     return 0;
 }
