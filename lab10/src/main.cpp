@@ -1,10 +1,10 @@
 #include <iostream>
 #include <algorithm>
-#include <boost/algorithm/string.hpp>
-#include <boost/tokenizer.hpp>
+// #include <boost/algorithm/string.hpp>
+// #include <boost/tokenizer.hpp>
 #include <regex>
 
-typedef boost::tokenizer <boost::char_separator<char>> tokenizer;
+// typedef boost::tokenizer <boost::char_separator<char>> tokenizer;
 
 using namespace std;
 void print(char x){
@@ -190,13 +190,22 @@ int main() {
 //    line=regex_replace(line, regPattern, "Java");
 //    cout<<"Po replace: "<<line<<endl;
 
-    //TODO 10.1 10.2
-
     smatch res;
     string line("fewmsnawk3m2m+64.789as,d-7.234sk2m+0.01sck");
     if(regex_search(line,res, regex(R"((\+|\-)[0-9]+\.[0-9]+)"))) {
         cout << "Podgrupy ver2:" << endl;
         for (const auto & match : res)
+        {
+            cout << "[" << match <<"] ";
+            cout << "dl: " << match.length() << endl;
+        }
+    }
+
+    smatch res2;
+    string line2("fewm04:00:00snawk3m2m12:34:56as,d04:00:00sk2m25:30:45sck");
+    if(regex_search(line2,res2, regex(R"([0-9]{2}:[0-9]{2}(:[0-9]{2}|))"))) {
+        cout << "Podgrupy ver2:" << endl;
+        for (const auto & match : res2)
         {
             cout << "[" << match <<"] ";
             cout << "dl: " << match.length() << endl;
